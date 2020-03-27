@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- https://material.io/resources/color/ -->
+
+    <color name="colorPrimary">#6A1B9A</color>
+    <color name="colorPrimaryDark">#9C4DCC</color>
+    <color name="colorAccent">#38006B</color>
+    <color name="colorDisabled">#A0A0A0</color>
+    <color name="colorToast">#e6ceff</color>
+    <color name="colorInvalidInput">#b71c1c</color>
+</resources>

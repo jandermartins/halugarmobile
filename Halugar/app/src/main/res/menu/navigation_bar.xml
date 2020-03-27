@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/navigation_informacoes"
+        android:title="descrição"
+        android:icon="@drawable/ic_informacoes" />
+
+    <item android:id="@+id/navigation_contato"
+        android:title="contato"
+        android:icon="@drawable/ic_contato" />
+
+    <item
+        android:id="@+id/navigation_fotos"
+        android:icon="@drawable/ic_fotos"
+        android:title="imagens" />
+
+    <item android:id="@+id/navigation_localizacao"
+        android:title="localização"
+        android:icon="@drawable/ic_localizacao" />
+</menu>

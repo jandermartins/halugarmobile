@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/labelQtdVagasAnuncio"
+            app:layout_constraintStart_toEndOf="@+id/labelQtdVagasAnuncio">
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoPrincipalBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/textView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoPrincipal"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoPrincipalBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoPrincipalBackground"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoPrincipalBackground" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoDoisBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoTresBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoDois"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoDoisBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoDoisBackground"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoDoisBackground" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoTresBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoQuatroBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoDoisBackground" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoTres"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoTresBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoTresBackground"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoTresBackground" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoQuatroBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoCincoBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoTresBackground" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoQuatro"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoQuatroBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoQuatroBackground"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoQuatroBackground" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoCincoBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="85dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoQuatroBackground" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoCinco"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoCincoBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoCincoBackground"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoCincoBackground" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:drawableStart="@drawable/ic_zoom"
+                android:gravity="center"
+                android:text="Amplie para ver detalhes"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoDoisBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoPrincipalBackground" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

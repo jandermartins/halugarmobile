@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Activities.MeusAnuncios.EditarMeuAnuncioFotos">
+
+    <ScrollView
+        android:id="@+id/scrollViewEditarFotos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tbMeuAnuncioFotos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/toolbarEditarFotos"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarEditarFotos">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:background="#FFFFFF">
+
+            <ImageButton
+                android:id="@+id/ivFotoPrincipalEditarBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="45dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoDoisEditarBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/ivFotoPrincipalEditar"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoPrincipalEditarBackground"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoPrincipalEditarBackground" />
+
+            <ImageButton
+                android:id="@+id/ibEditarFotoPrincipal"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="240dp"
+                android:layout_marginEnd="240dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFotoPrincipalEditarBackground"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoPrincipalEditarBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoPrincipalEditarBackground"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoPrincipalEditarBackground"
+                app:srcCompat="@drawable/ic_adicionar" />
+
+            <ImageButton
+                android:id="@+id/ivFotoDoisEditarBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoTresEditarBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoPrincipalEditarBackground" />
+
+            <ImageButton
+                android:id="@+id/ivFotoDoisEditar"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoDoisEditarBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoDoisEditarBackground"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoDoisEditarBackground" />
+
+            <ImageButton
+                android:id="@+id/ibEditarFotoDois"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFotoDoisEditarBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoDoisEditarBackground"
+                app:srcCompat="@drawable/ic_adicionar" />
+
+            <ImageButton
+                android:id="@+id/ibRemoverFotoDois"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFotoDoisEditarBackground"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoDoisEditarBackground"
+                app:srcCompat="@drawable/ic_excluir" />
+
+            <ImageButton
+                android:id="@+id/ivFotoTresEditarBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoQuatroEditarBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoDoisEditarBackground" />
+
+            <ImageButton
+                android:id="@+id/ivFotoTresEditar"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoTresEditarBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoTresEditarBackground"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoTresEditarBackground" />
+
+            <ImageButton
+                android:id="@+id/ibEditarFotoTres"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFotoTresEditarBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoTresEditarBackground"
+                app:srcCompat="@drawable/ic_adicionar" />
+
+            <ImageButton
+                android:id="@+id/ibRemoverFotoTres"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFotoTresEditarBackground"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoTresEditarBackground"
+                app:srcCompat="@drawable/ic_excluir" />
+
+            <ImageButton
+                android:id="@+id/ivFotoQuatroEditarBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoCincoEditarBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoTresEditarBackground" />
+
+            <ImageButton
+                android:id="@+id/ivFotoQuatroEditar"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoQuatroEditarBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoQuatroEditarBackground"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoQuatroEditarBackground" />
+
+            <ImageButton
+                android:id="@+id/ibEditarFotoQuatro"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFotoQuatroEditarBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoQuatroEditarBackground"
+                app:srcCompat="@drawable/ic_adicionar" />
+
+            <ImageButton
+                android:id="@+id/ibRemoverFotoQuatro"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFotoQuatroEditarBackground"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoQuatroEditarBackground"
+                app:srcCompat="@drawable/ic_excluir" />
+
+            <ImageButton
+                android:id="@+id/ivFotoCincoEditarBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoQuatroEditarBackground" />
+
+            <ImageButton
+                android:id="@+id/ivFotoCincoEditar"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoCincoEditarBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoCincoEditarBackground"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoCincoEditarBackground" />
+
+            <ImageButton
+                android:id="@+id/ibEditarFotoCinco"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFotoCincoEditarBackground"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoCincoEditarBackground"
+                app:srcCompat="@drawable/ic_adicionar" />
+
+            <ImageButton
+                android:id="@+id/ibRemoverFotoCinco"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFotoCincoEditarBackground"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoCincoEditarBackground"
+                app:srcCompat="@drawable/ic_excluir" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Imagem principal"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoDoisEditarBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoPrincipalEditarBackground" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarEditarFotos"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnMenuEditarFotos"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_menu_foreground"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnExcluirAnuncio"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_excluir"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp"></ImageButton>
+
+        <TextView
+            android:id="@+id/labelMeuAnuncio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="EDITAR IMAGENS"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="18dp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbMeuAnuncioFotos"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:titleMargin="0dp">
+
+        <Button
+            android:id="@+id/btnSalvarFotos"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:background="#009C4DCC"
+            android:drawableLeft="@drawable/ic_salvar"
+            android:text="Salvar"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pbEditarAnuncioFotosLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="#FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar10"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelSalvandoImagens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvando alterações"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar10" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pbEditarAnuncioFotosLayoutRemover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="#FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar10Remover"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelRemovendoAnuncio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Removendo anúncio"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar10Remover" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

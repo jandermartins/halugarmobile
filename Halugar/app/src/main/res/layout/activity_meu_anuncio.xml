@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Activities.MeusAnuncios.MeuAnuncioActivity">
+
+    <ImageView
+        android:id="@+id/ivMeuAnuncioPrevia"
+        android:layout_width="302dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ic_launcher_background"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/tvCidadeEstadoMeuAnuncioPrevia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMeuAnuncio"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvBairroMeuAnuncioPrevia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeMinTextSize="18sp"
+        android:autoSizeTextType="uniform"
+        android:baselineAligned="false"
+        android:maxWidth="300dp"
+        android:text="..."
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvPrecoMeuAnuncioPrevia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCidadeEstadoMeuAnuncioPrevia" />
+
+    <TextView
+        android:id="@+id/tvCidadeEstadoMeuAnuncioPrevia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeMinTextSize="18sp"
+        android:autoSizeTextType="uniform"
+        android:baselineAligned="false"
+        android:maxWidth="300dp"
+        android:text="..."
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvBairroMeuAnuncioPrevia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMeuAnuncioPrevia" />
+
+    <TextView
+        android:id="@+id/tvPrecoMeuAnuncioPrevia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="..."
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tbMeuAnuncio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBairroMeuAnuncioPrevia" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMeuAnuncio"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnMenuMeuAnuncio"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_menu_foreground"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnExcluirAnuncio"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_excluir"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp"></ImageButton>
+
+        <TextView
+            android:id="@+id/labelMeuAnuncio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="MEUS ANÚNCIOS"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="18dp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbMeuAnuncio"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnInformacoesMeuAnuncio"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:background="#009C4DCC"
+            android:drawableLeft="@drawable/ic_informacoes"
+            android:text="DESCRIÇÃO"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnFotosMeuAnuncio"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:background="#006A1B9A"
+            android:drawableLeft="@drawable/ic_fotos"
+            android:text="IMAGENS"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

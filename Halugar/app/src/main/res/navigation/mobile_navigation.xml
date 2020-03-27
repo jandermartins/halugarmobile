@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_informacoes">
+
+    <fragment
+        android:id="@+id/navigation_informacoes"
+        android:name="br.ufc.crateus.halugar.Activities.Anuncio.InformacoesFragment"
+        android:label="Informações"
+        tools:layout="@layout/fragment_informacoes" />
+
+    <fragment
+        android:id="@+id/navigation_contato"
+        android:name="br.ufc.crateus.halugar.Activities.Anuncio.ContatoFragment"
+        android:label="Contato"
+        tools:layout="@layout/fragment_contato" />
+
+    <fragment
+        android:id="@+id/navigation_fotos"
+        android:name="br.ufc.crateus.halugar.Activities.Anuncio.FotosFragment"
+        android:label="Fotos"
+        tools:layout="@layout/fragment_fotos" />
+
+    <fragment
+        android:id="@+id/navigation_localizacao"
+        android:name="br.ufc.crateus.halugar.Activities.Anuncio.LocalizacaoFragment"
+        android:label="Localização"
+        tools:layout="@layout/fragment_localizacao" />
+</navigation>

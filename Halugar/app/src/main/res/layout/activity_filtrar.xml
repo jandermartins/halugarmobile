@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Procurar.FiltrarActivity">
+
+    <ScrollView
+        android:id="@+id/scrollViewFiltro"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/tbFiltrarProcurar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarFiltrar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            app:layout_constraintStart_toEndOf="parent">
+
+            <Button
+                android:id="@+id/btnLimparFiltros"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/rounded_button"
+                android:drawableLeft="@drawable/ic_limpar"
+                android:paddingLeft="15dp"
+                android:paddingRight="7dp"
+                android:text="Limpar filtros"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/etTermoFiltrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="14dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:maxLength="100"
+                app:layout_constraintBottom_toTopOf="@+id/labelPrecoMaximo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelTermo" />
+
+            <EditText
+                android:id="@+id/etPrecoMaximoFiltrar"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:maxLength="9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelPrecoMaximo" />
+
+            <EditText
+                android:id="@+id/etPrecoMinimoFiltrar"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:maxLength="9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelPrecoMinimo" />
+
+            <EditText
+                android:id="@+id/etBairroFiltrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:inputType="textPersonName|textCapSentences"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelBairro" />
+
+            <EditText
+                android:id="@+id/etCidadeFiltrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:inputType="textPersonName|textCapSentences"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelCidade" />
+
+            <EditText
+                android:id="@+id/etQuatidadeVagasFiltrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="9"
+                app:layout_constraintBottom_toTopOf="@+id/labelRaio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/etRaioDistanciaFiltrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelRaio" />
+
+            <RadioGroup
+                android:id="@+id/rbOrdenar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:checkedButton="@+id/rbCrescente"
+                android:orientation="horizontal"
+                android:layout_marginLeft="0dp"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:layout_constraintBottom_toTopOf="@+id/btnLimparFiltros"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etRaioDistanciaFiltrar">
+
+                <RadioButton
+                    android:id="@+id/rbCrescente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Preço crescente"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rbDecrescente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Preço decrescente"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etEstado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:clickable="false"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/spEstadoFiltrar" />
+
+            <Spinner
+                android:id="@+id/spEstadoFiltrar"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelEstado" />
+
+            <TextView
+                android:id="@+id/labelTermo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="24dp"
+                android:text="Procurar por (rua, ponto de referência etc.)"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/etTermoFiltrar"
+                app:layout_constraintStart_toStartOf="@+id/etTermoFiltrar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/labelPrecoMaximo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="87dp"
+                android:text="Preço máximo"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/etPrecoMaximoFiltrar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/etPrecoMaximoFiltrar"
+                app:layout_constraintTop_toBottomOf="@+id/etTermoFiltrar" />
+
+            <TextView
+                android:id="@+id/labelVagas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="16dp"
+                android:text="Quantidade de vagas"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/etQuatidadeVagasFiltrar"
+                app:layout_constraintStart_toStartOf="@+id/etQuatidadeVagasFiltrar"
+                app:layout_constraintTop_toBottomOf="@+id/spEstadoFiltrar" />
+
+            <TextView
+                android:id="@+id/labelEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:text="Estado"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/spEstadoFiltrar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCidadeFiltrar" />
+
+            <TextView
+                android:id="@+id/labelRaio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="Raio de distância do local atual (km)"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/etRaioDistanciaFiltrar"
+                app:layout_constraintStart_toStartOf="@+id/etRaioDistanciaFiltrar" />
+
+            <TextView
+                android:id="@+id/labelBairro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="16dp"
+                android:text="Bairro"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/etPrecoMinimoFiltrar"
+                app:layout_constraintTop_toBottomOf="@+id/etPrecoMinimoFiltrar" />
+
+            <TextView
+                android:id="@+id/labelCidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:text="Cidade"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etBairroFiltrar" />
+
+            <TextView
+                android:id="@+id/labelPrecoMinimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:text="Preço mínimo"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/etPrecoMinimoFiltrar"
+                app:layout_constraintStart_toStartOf="@+id/etPrecoMinimoFiltrar"
+                app:layout_constraintTop_toBottomOf="@+id/etTermoFiltrar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarFiltrar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnMenuFiltrar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_menu_foreground"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnEntrarIconeFiltrar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorPrimary"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_entrar_foreground"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="8dp"></ImageButton>
+
+        <TextView
+            android:id="@+id/labelProcurar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="FILTRAGEM"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="18dp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbFiltrarProcurar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnFiltrar"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:background="#006A1B9A"
+            android:drawableLeft="@drawable/ic_filtrar"
+            android:text="Filtrar"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

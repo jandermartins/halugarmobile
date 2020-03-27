@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Activities.MeusAnuncios.MeuAnuncioFotos">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tbMeuAnuncioFotos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/toolbarMeuAnuncio"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMeuAnuncio">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/labelQtdVagasAnuncio"
+            app:layout_constraintStart_toEndOf="@+id/labelQtdVagasAnuncio">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="17dp"
+                android:drawableStart="@drawable/ic_zoom"
+                android:gravity="center"
+                android:text="Amplie para ver detalhes"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoDoisBackgroundMeuAnuncio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoPrincipalBackgroundMeuAnuncio" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoPrincipalBackgroundMeuAnuncio"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="45dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoDoisBackgroundMeuAnuncio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoPrincipal"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoPrincipalBackgroundMeuAnuncio"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoPrincipalBackgroundMeuAnuncio"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoPrincipalBackgroundMeuAnuncio" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoDoisBackgroundMeuAnuncio"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoTresBackgroundMeuAnuncio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoPrincipalBackgroundMeuAnuncio" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoDois"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/ivFotoDoisBackgroundMeuAnuncio"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoDoisBackgroundMeuAnuncio"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoDoisBackgroundMeuAnuncio" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoTresBackgroundMeuAnuncio"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoQuatroBackgroundMeuAnuncio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoDoisBackgroundMeuAnuncio" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoTres"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoTresBackgroundMeuAnuncio"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoTresBackgroundMeuAnuncio"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoTresBackgroundMeuAnuncio" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoQuatroBackgroundMeuAnuncio"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ivFotoCincoBackgroundMeuAnuncio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoTresBackgroundMeuAnuncio" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoQuatro"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoQuatroBackgroundMeuAnuncio"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoQuatroBackgroundMeuAnuncio"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoQuatroBackgroundMeuAnuncio" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoCincoBackgroundMeuAnuncio"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/ic_launcher_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFotoQuatroBackgroundMeuAnuncio" />
+
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/ivFotoCinco"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="@+id/ivFotoCincoBackgroundMeuAnuncio"
+                app:layout_constraintStart_toStartOf="@+id/ivFotoCincoBackgroundMeuAnuncio"
+                app:layout_constraintTop_toTopOf="@+id/ivFotoCincoBackgroundMeuAnuncio" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMeuAnuncio"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnMenuMeuAnuncioFotos"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_menu_foreground"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/btnExcluirAnuncio"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_excluir"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp"></ImageButton>
+
+        <TextView
+            android:id="@+id/labelMeuAnuncio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="IMAGENS"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="18dp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbMeuAnuncioFotos"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:titleMargin="0dp">
+
+        <Button
+            android:id="@+id/btnAtualizarFotosAnuncio"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:background="#009C4DCC"
+            android:drawableLeft="@drawable/ic_editar"
+            android:text="Editar"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pbMeuAnuncioFotosLayoutRemover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="#FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar8"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelRemovendoAnuncio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Removendo anúncio"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Activities.Menu.MenuActivity">
+
+    <ImageButton
+        android:id="@+id/btnAnunciarMenu"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/labelAnunciar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMenu"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_anunciar" />
+
+    <ImageButton
+        android:id="@+id/btnTodosAnunciosMenu"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/labelInicio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMenu"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_anuncios" />
+
+
+    <ImageButton
+        android:id="@+id/btnFavoritos"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/labelFavoritos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelMinhaConta"
+        app:srcCompat="@drawable/ic_favoritos" />
+
+    <ImageButton
+        android:id="@+id/btnProcurarMenu"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/labelProcurar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelMeuAnuncio"
+        app:srcCompat="@drawable/ic_procurar" />
+
+    <ImageButton
+        android:id="@+id/btnMeuAnuncio"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/labelMeuAnuncio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelAnunciar"
+        app:srcCompat="@drawable/ic_meu_anuncio" />
+
+    <ImageButton
+        android:id="@+id/btnMeuCadastro"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/labelMinhaConta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelInicio"
+        app:srcCompat="@drawable/ic_minha_conta" />
+
+    <TextView
+        android:id="@+id/labelInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="INÍCIO"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnMeuCadastro"
+        app:layout_constraintEnd_toEndOf="@+id/btnTodosAnunciosMenu"
+        app:layout_constraintStart_toStartOf="@+id/btnTodosAnunciosMenu"
+        app:layout_constraintTop_toBottomOf="@+id/btnTodosAnunciosMenu" />
+
+    <TextView
+        android:id="@+id/labelAnunciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="ANUNCIAR"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnMeuAnuncio"
+        app:layout_constraintEnd_toEndOf="@+id/btnAnunciarMenu"
+        app:layout_constraintStart_toStartOf="@+id/btnAnunciarMenu"
+        app:layout_constraintTop_toBottomOf="@+id/btnAnunciarMenu" />
+
+    <TextView
+        android:id="@+id/labelMinhaConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="MINHA CONTA"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnFavoritos"
+        app:layout_constraintEnd_toEndOf="@+id/btnMeuCadastro"
+        app:layout_constraintStart_toStartOf="@+id/btnMeuCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/btnMeuCadastro" />
+
+    <TextView
+        android:id="@+id/labelMeuAnuncio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="MEUS ANÚNCIOS"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnProcurarMenu"
+        app:layout_constraintEnd_toEndOf="@+id/btnMeuAnuncio"
+        app:layout_constraintStart_toStartOf="@+id/btnMeuAnuncio"
+        app:layout_constraintTop_toBottomOf="@+id/btnMeuAnuncio" />
+
+    <TextView
+        android:id="@+id/labelFavoritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FAVORITOS"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tbSair"
+        app:layout_constraintEnd_toEndOf="@+id/btnFavoritos"
+        app:layout_constraintStart_toStartOf="@+id/btnFavoritos"
+        app:layout_constraintTop_toBottomOf="@+id/btnFavoritos" />
+
+    <TextView
+        android:id="@+id/labelProcurar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROCURAR"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tbSair"
+        app:layout_constraintEnd_toEndOf="@+id/btnProcurarMenu"
+        app:layout_constraintStart_toStartOf="@+id/btnProcurarMenu"
+        app:layout_constraintTop_toBottomOf="@+id/btnProcurarMenu" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMenu"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnVoltarMenu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@mipmap/ic_backarrow_foreground"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp"></ImageButton>
+
+        <ImageView
+            android:id="@+id/imgHalugarMain"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:paddingTop="7dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="7dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_logocabecalho"
+            tools:layout_editor_absoluteX="16dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbSair"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnSair"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="#006A1B9A"
+            android:drawableLeft="@drawable/ic_sair"
+            android:text="Sair"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

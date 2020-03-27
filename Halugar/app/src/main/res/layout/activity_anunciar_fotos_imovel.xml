@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Activities.Anunciar.AnunciarFotosImovelActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/tbMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAnunciar"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            app:layout_constraintStart_toEndOf="parent">
+
+            <ImageButton
+                android:id="@+id/ibImagemPrincipalBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/ibImagemPrincipal"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="@+id/ibImagemPrincipalBackground"
+                app:layout_constraintStart_toStartOf="@+id/ibImagemPrincipalBackground"
+                app:layout_constraintTop_toTopOf="@+id/ibImagemPrincipalBackground" />
+
+            <ImageButton
+                android:id="@+id/ibSelecionarImagemPrincipal"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/ibImagemPrincipalBackground"
+                app:layout_constraintStart_toStartOf="@+id/ibImagemPrincipalBackground"
+                app:srcCompat="@drawable/ic_adicionar" />
+
+            <ImageButton
+                android:id="@+id/ibImagemDoisBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ibImagemTresBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFotoPrincipal" />
+
+            <ImageButton
+                android:id="@+id/ibImagemDois"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="@+id/ibImagemDoisBackground"
+                app:layout_constraintStart_toStartOf="@+id/ibImagemDoisBackground"
+                app:layout_constraintTop_toTopOf="@+id/ibImagemDoisBackground" />
+
+            <ImageButton
+                android:id="@+id/ibSelecionarImagemDois"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                app:layout_constraintBottom_toBottomOf="@+id/ibImagemDoisBackground"
+                app:layout_constraintStart_toStartOf="@+id/ibImagemDoisBackground"
+                app:srcCompat="@drawable/ic_adicionar" />
+
+            <ImageButton
+                android:id="@+id/ibRemoverImagemDois"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/ibImagemDoisBackground"
+                app:layout_constraintEnd_toEndOf="@+id/ibImagemDoisBackground"
+                app:srcCompat="@drawable/ic_excluir" />
+
+            <ImageButton
+                android:id="@+id/ibImagemTresBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ibImagemQuatroBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/ibImagemTres"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="@+id/ibImagemTresBackground"
+                app:layout_constraintStart_toStartOf="@+id/ibImagemTresBackground"
+                app:layout_constraintTop_toTopOf="@+id/ibImagemTresBackground" />
+
+            <ImageButton
+                android:id="@+id/ibSelecionarImagemTres"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/ibImagemTresBackground"
+                app:layout_constraintStart_toStartOf="@+id/ibImagemTresBackground"
+                app:srcCompat="@drawable/ic_adicionar" />
+
+            <ImageButton
+                android:id="@+id/ibRemoverImagemTres"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/ibImagemTresBackground"
+                app:layout_constraintEnd_toEndOf="@+id/ibImagemTresBackground"
+                app:srcCompat="@drawable/ic_excluir" />
+
+            <ImageButton
+                android:id="@+id/ibImagemQuatroBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/ibImagemCincoBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/ibImagemQuatro"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="@+id/ibImagemQuatroBackground"
+                app:layout_constraintStart_toStartOf="@+id/ibImagemQuatroBackground"
+                app:layout_constraintTop_toTopOf="@+id/ibImagemQuatroBackground" />
+
+            <ImageButton
+                android:id="@+id/ibSelecionarImagemQuatro"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/ibImagemQuatroBackground"
+                app:layout_constraintStart_toStartOf="@+id/ibImagemQuatroBackground"
+                app:srcCompat="@drawable/ic_adicionar" />
+
+            <ImageButton
+                android:id="@+id/ibRemoverImagemQuatro"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/ibImagemQuatroBackground"
+                app:layout_constraintEnd_toEndOf="@+id/ibImagemQuatroBackground"
+                app:srcCompat="@drawable/ic_excluir" />
+
+            <ImageButton
+                android:id="@+id/ibImagemCincoBackground"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/ibImagemCinco"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="@+id/ibImagemCincoBackground"
+                app:layout_constraintStart_toStartOf="@+id/ibImagemCincoBackground"
+                app:layout_constraintTop_toTopOf="@+id/ibImagemCincoBackground" />
+
+            <ImageButton
+                android:id="@+id/ibSelecionarImagemCinco"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/ibImagemCincoBackground"
+                app:layout_constraintStart_toStartOf="@+id/ibImagemCincoBackground"
+                app:srcCompat="@drawable/ic_adicionar" />
+
+            <ImageButton
+                android:id="@+id/ibRemoverImagemCinco"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner"
+                android:scaleType="center"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/ibImagemCincoBackground"
+                app:layout_constraintEnd_toEndOf="@+id/ibImagemCincoBackground"
+                app:srcCompat="@drawable/ic_excluir" />
+
+            <TextView
+                android:id="@+id/tvFotoPrincipal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="24dp"
+                android:text="Imagem principal (obrigatória)"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/ibImagemDoisBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ibImagemPrincipalBackground" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAnunciar"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--
+        <ImageButton
+            android:id="@+id/btnVoltarAnunciarImagem"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@color/colorPrimary"
+            android:src="@mipmap/ic_backarrow_foreground"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp"></ImageButton>
+        -->
+
+        <ImageButton
+            android:id="@+id/btnMenuAnunciarFotos"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_menu_foreground"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp"></ImageButton>
+
+        <TextView
+            android:id="@+id/labelAnunciar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="IMAGENS"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="18dp"></TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbMain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnAnunciar"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="#006A1B9A"
+            android:drawableLeft="@drawable/ic_megafone_foreground"
+            android:text="Criar anúncio"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pbAnunciarFotosLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="#FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tbMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbarAnunciar">
+
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="182dp"
+            android:layout_marginEnd="181dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelCriandoAnuncio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Criando anúncio"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
